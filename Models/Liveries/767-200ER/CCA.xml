@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">CCA - Air China</name>
+            <texture>Liveries/767-200ER/CCA.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

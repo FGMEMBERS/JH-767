@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+
+	<!-- 
+		************************************************************************
+		Boeing 767
+		Peter Brendt (Jabberwocky)
+
+		based on:
+		3D model by Israel Hernandez (IAHM-COL)
+		************************************************************************
+	-->
+
+	<PropertyList include="Aircraft/JPack/Interface.xml">
+
+	<sim>
+
+		<description>767-200ER</description>
+		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), Isreal Hernandez (3D for KC-46)</author>
+
+		<aircraft-version>V00.00.00</aircraft-version>
+		<status>Alpha</status>
+
+		<rating>
+			<FDM type="int">     0 </FDM>
+			<systems type="int"> 0 </systems>
+			<cockpit type="int"> 0 </cockpit>
+			<model type="int">   2 </model>
+		</rating>
+
+		<flight-model>jsb</flight-model>
+  		<aero>767-200ER</aero>
+		<engine>PW4062</engine>
+
+		<!-- Splash screen while loading -->
+		<startup>
+			<splash-texture>Aircraft/767/splash.png</splash-texture>
+		</startup>
+
+		<!-- Settings for model -->
+		<model>
+			<!-- Path to main model file -->
+			<path>Aircraft/767/Models/767-200ER.xml</path>
+
+			<!-- JPack: push forces for Voodoomaster Pushback -->
+			<pushback>
+				<kp type="double">800</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+				<enabled type="bool">false</enabled>
+			</pushback>
+
+			<!-- String variable to hold current livery -->
+			<livery>
+				<file type="string">JFW</file>
+			</livery>
+
+		</model>
+
+		<!-- Subsection for submodels -->
+		<!-- submodels>
+			<serviceable type="bool">1</serviceable>
+			<path>Aircraft/JPack/Voodoomaster/Services/Military/MilitarySub.xml</path>
+		</submodels -->  
+
+		<!-- basic startup settings for sim -->
+		<freeze>
+			<fuel>false</fuel>	<!-- false is default -->
+		</freeze>
+
+		<fuel-fraction>0.8</fuel-fraction>
+
+		<chase-distance-m type="double" archive="y">-50.0</chase-distance-m>
+
+		<sound>
+			<path>Aircraft/767/Sounds/Sounds.xml</path>
+		</sound>
+
+		<autostart>
+			<started>0</started>
+		</autostart>
+
+		<flaps>
+			<setting>0.000</setting>
+			<setting>0.125</setting>
+			<setting>0.250</setting>
+			<setting>0.375</setting>
+			<setting>0.500</setting>
+			<setting>0.625</setting>
+			<setting>0.750</setting>
+			<setting>0.875</setting>
+			<setting>1.000</setting>
+		</flaps>
+
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+
+		<!-- Instrumentation in sim -->
+		<instrumentation include="Systems/instrumentation.xml"></instrumentation>
+
+		<!-- #### MP section if exists -->
+		
+		<!-- #### HUD section if exists -->
+		<hud>
+			<enable3d>false</enable3d>
+		</hud>
+		  
+		<!-- Blackout rendering due to G-forces -->
+		<rendering>
+			<redout>
+				<parameters>
+					<blackout-complete-g>9.1</blackout-complete-g>
+					<blackout-onset-g>7.5</blackout-onset-g>
+				</parameters>
+			</redout>
+		</rendering>
+
+		<!-- All the views (crew stations + 1 more to allow moving around + extras liek Tail Camera) -->
+
+		<view n="0">
+			<name>Pilot</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<x-offset-m type="double">-0.67</x-offset-m>
+				<y-offset-m type="double">-0.30</y-offset-m>
+				<z-offset-m type="double">-23.50</z-offset-m>
+				<pitch-offset-deg>-13.5</pitch-offset-deg>
+				<heading-offset-deg> 0 </heading-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="100">
+			<name>Wing View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-8.0</pitch-offset-deg>
+				<heading-offset-deg type="double">90</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> -2.65 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> 0.66 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 5.80 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+
+		<view n="102">
+			<name>Tail view</name>
+			<type>lookfrom</type>
+			<internal type="bool">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+				<x-offset-m type="double">0.00</x-offset-m>
+				<y-offset-m type="double">13.20</y-offset-m>
+				<z-offset-m type="double">25.55</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+			</config>
+			<dynamic>
+				<enabled type="bool">false</enabled>
+			</dynamic>
+		</view>
+
+		<view n="1501">
+			<name>Right Turbofan</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-14.0</pitch-offset-deg>
+				<heading-offset-deg type="double">260.55</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> 2.24714 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> 0.66 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 1.64343 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+
+		<view n="1502">
+			<name>Landing Gear</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-8.0</pitch-offset-deg>
+				<heading-offset-deg type="double">0</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> 0.0 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> -4.5 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 6.91416 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+
+		<view n="1503">
+			<name>Cabin</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<heading-offset-deg type="double">0</heading-offset-deg>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+		                <x-offset-m type="double">0.0</x-offset-m>
+                		<y-offset-m type="double">-0.3</y-offset-m>
+                		<z-offset-m type="double">-22.00</z-offset-m>
+				<pitch-offset-deg archive="y">-1.55</pitch-offset-deg>
+			</config>
+		</view>
+
+		<view n="1504">
+			<name>Copilot</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<heading-offset-deg type="double">0</heading-offset-deg>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+		                <x-offset-m type="double"> 0.67</x-offset-m>
+		                <y-offset-m type="double">-0.30</y-offset-m>
+		                <z-offset-m type="double">-23.50</z-offset-m>
+				<pitch-offset-deg archive="y">-12.5</pitch-offset-deg>
+			</config>
+		</view>
+
+		<airport>
+			<runways>
+				<start-offset-m>25</start-offset-m>
+			</runways>
+		</airport>
+
+		<help>
+			<title>JWocky's workshop plane</title>
+
+			<key>
+				<name>w/W</name>
+				<desc>Walk forwards/backwards (on interior views only)</desc>
+			</key>
+
+			<key>
+				<name>Delete</name>
+				<desc>toggle thrust reversers</desc>
+			</key>
+
+			<key>
+				<name>g/G</name>
+				<desc>raise/lower landing gear</desc>
+			</key>
+
+			<key>
+				<name>B (shift and b)</name>
+				<desc>toggle parking brakes</desc>
+			</key>
+
+			<key>
+				<name>pgup/pgdn</name>
+				<desc>throttle increase/decrease</desc>
+			</key>
+            
+			<key>
+				<name>[/]</name>
+				<desc>raise/lower flaps</desc>
+			</key>
+
+			<key>
+				<name>Ctrl-b</name>
+				<desc>toggle speed brakes</desc>
+			</key>
+
+			<key>
+				<name>s</name>
+				<desc>hold to start engines</desc>
+			</key>
+
+			<text>
+				=== Takeoff Procedure ===
+				Pre-departure:
+				1. - Allocate your fuel, passengers and weight under Equipment/fuel and payload
+				   - Once passengers and baggage are loaded and weights defined, close the exit doors
+				     and ensure stairways are disconnected
+				   - Ensure a complete systems checklist is carried out
+				   - Airport operations vehicles should be disconnected from around the aircraft
+				   - Taxi away from the terminal with a Pushback truck
+				   - In poor weather conditions, or crowded airport aprons, A Followme truck should be used if required
+
+				Departure:
+				2. Select 767-300ER/Autostart (or hold s) to get the engines running
+				3. set your flaps suitably for the conditions and runway length
+				4. Release the parking brakes
+				5. Apply throttle gently, until at 75% throttle
+				6. Rotate at around 140-160kt
+				7. Raise landing gear at positive climb
+				8. Maintain positive climb
+
+				Captain Notes:
+				- Never reverse from terminal without aid from a pushback. It should be used until the aircraft is on the taxiway.
+				- Ensure you allow enough room to manoeuvre around the airport, given that it is a long aircraft.
+				- On a short or wet runway, flaps should be set lower on both landing and takeoff, and throttle set to full on takeoff.
+				- There are risks of overrunning the runway apron upon landing and takeoff, aswell as overrunning the taxiway corners in the 767. In wet 					conditions especially; take care and ensure that the correct speed guidelines and height are maintained.
+				- During turbulant conditions, The seatbelt warning sound should be initiated by the captain.
+
+				=== Cruising ===
+				Cruising Speed: Mach 0.80
+				Service Ceiling: 42,000ft
+
+				=== Landing ===
+				1. Decend through 200kt, reaching roughly 160kt 1mile before reaching the apron
+				2. set flaps accordingly
+				3. Land at roughly 140kt, touch down carefully and smoothly at 135kt.
+				4. Apply Speedbrakes
+				5. Apply thrust reversal and apply throttle
+				6. Lower throttle and deactivate thrust reversers
+				7. If necessary, Emergency brakes should be used
+			</text>
+		</help>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Pegasus</label>
+					<enabled type="bool">true</enabled>
+
+					<item>
+						<label>Autostart</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/start-idling</property>
+						</binding>
+					</item>
+
+					<item>
+						<label>Extend Boom</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-angle</property>
+							<value>0.6</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-extend</property>
+							<value>1.0</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Retract Boom</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-angle</property>
+							<value>0.0</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-extend</property>
+							<value>0.0</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Extend Probes</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[1]/probe-extended</property>
+							<value>true</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[2]/probe-extended</property>
+							<value>true</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[3]/probe-extended</property>
+							<value>true</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Retract Probes</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[1]/probe-extended</property>
+							<value>false</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[2]/probe-extended</property>
+							<value>false</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[3]/probe-extended</property>
+							<value>false</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Pushback</label>
+						<name>pushback</name>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
+
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+	
+					<item>
+						<label>Airport Operations</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", "Aircraft/767/Dialogs/airportoperations-dialog.xml");
+								mal.open();
+							</script>
+						</binding>
+					</item>
+	
+					<item>
+						<label>Announcements</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", "Aircraft/767/Dialogs/announcements-dialog.xml");
+								mal.open();
+							</script>
+						</binding>
+					</item>
+
+					<item>
+						<label>Doors</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", "Aircraft/767/Dialogs/doors-dialog.xml");
+								mal.open();
+							</script>
+						</binding>
+					</item>
+
+					<item>
+						<label>Yoke On/Off</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/yoke-visible</property>
+						</binding>
+					</item>
+
+				</menu>
+			</default>
+		</menubar>
+
+		<!-- Systems -->
+		<systems>
+			<path>Aircraft/767/Systems/767.xml</path>
+			<electrical>
+				<path>Aircraft/Generic/generic-electrical.xml</path>
+			</electrical>
+			<autopilot>
+				<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
+			</autopilot>
+		</systems>
+
+	</sim>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>Left wing</name>
+				<tank-num type="int">0</tank-num>
+				<level-gal_us archive="y">6070</level-gal_us>
+			</tank>
+
+			<tank n="1">
+				<name>Center forward</name>
+				<tank-num type="int">1</tank-num>
+				<level-gal_us archive="y">6000</level-gal_us>
+			</tank>
+
+			<tank n="2">
+				<name>Center middle</name>
+				<tank-num type="int">2</tank-num>
+				<level-gal_us archive="y">6070</level-gal_us>
+			</tank>
+
+			<tank n="3">
+				<name>Center aft</name>
+				<tank-num type="int">3</tank-num>
+				<level-gal_us archive="y">6000</level-gal_us>
+			</tank>
+
+			<tank n="4">
+				<name>Right wing</name>
+				<tank-num type="int">4</tank-num>
+				<level-gal_us archive="y">6070</level-gal_us>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<!-- Payload section: Whatever weights -->
+	<payload>
+
+		<weight n="0">
+			<name>Crew</name>
+			<!-- pilot + copilot -->
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+			<min-lb type="double">  200</min-lb>
+			<max-lb type="double">  400</max-lb>
+		</weight>
+
+		<weight n="1">
+			<!-- boom operator + load master -->
+			<name>Refuel ops</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+			<min-lb type="double">  200</min-lb>
+			<max-lb type="double">  400</max-lb>
+		</weight>
+
+		<weight n="2">
+			<!-- AirVac team (KC-46) or TechTeam (Workshop) -->
+			<name>AirVac Team</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double"> 3000</max-lb>
+		</weight>
+
+		<weight n="3">
+			<!-- Spare parts -->
+			<name>Load</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double">65000</max-lb>
+		</weight>
+
+	</payload>
+
+	<controls>
+		<engines>
+			<engine n="0">
+				<rpm>0</rpm>
+				<running>false</running>
+			</engine>
+			<engine n="1">
+				<rpm>0</rpm>
+				<running>false</running>
+			</engine>
+		</engines>
+
+		<gear>
+			<brake-parking type="double">1</brake-parking>
+		</gear>
+
+		<lighting>
+			<strobe>1</strobe>
+			<beacon>1</beacon>
+			<landing-lights>1</landing-lights>
+			<nav-lights>1</nav-lights>
+		</lighting>
+
+		<wing>
+			<anti-ice type="string">controls/ice/wings/auto</anti-ice>
+		</wing>
+		<eng1>
+			<anti-ice type="string">controls/ice/eng1/auto</anti-ice>
+		</eng1>
+		<eng2>
+			<anti-ice type="string">controls/ice/eng2/auto</anti-ice>
+		</eng2>
+	</controls>
+
+	<!-- Systems parallel to sim -->
+	<systems>
+		<path>Aircraft/767/Systems/767.xml</path>
+		<electrical>
+			<path>Aircraft/Generic/generic-electrical.xml</path>
+		</electrical>
+		<autopilot>
+			<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
+		</autopilot>
+	</systems>
+
+	<!-- #### ai submodels -->
+
+	<input>
+		<!-- keyboard include="XMLs/Keyboard.xml"/ -->
+		<keyboard>
+
+			<key n="119">
+				<name>w</name>
+				<desc>Walk forward toward view</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>walk.walk_about(0.1)</script>
+				</binding>
+			</key>
+
+			<key n="87">
+				<name>W</name>
+				<desc>Walk backward from view</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>walk.walk_about(-0.1)</script>
+				</binding>
+			</key>
+
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle thrust reverser.</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>fdm/jsbsim/propulsion/engine/reverser-angle-rad</property>
+					<value>180</value>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-cycle</command>
+					<property>fdm/jsbsim/propulsion/engine[1]/reverser-angle-rad</property>
+					<value>180</value>
+					<value>0</value>
+				</binding>
+			</key>
+
+			<!-- key n="127">
+				<name>Delete</name>
+				<desc>Toggle Reversers</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/reverser</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[1]/reverser</property>
+				</binding>
+			</key -->
+		</keyboard>
+	</input>
+  
+	<!-- Voodoomaster plane specific initializations -->
+	<voodoomaster>
+		<steering-wheel type="int">0</steering-wheel>
+		<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+		<pushback>
+			<activated type="bool">false</activated>
+		</pushback>
+		<refuel n="0">
+			<device type="string">RefuelBoom</device>
+			<boom-angle type="float">0.0</boom-angle>
+			<boom-extend type="float">0.0</boom-extend>
+		</refuel>
+		<refuel n="1">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
+		<refuel n="2">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
+		<refuel n="3">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
+	</voodoomaster>
+
+	<instrumentation>
+		<sysinfo>
+			<first>0</first>
+			<max>0</max>
+		</sysinfo>
+		<ndfull>
+			<ground-factor type="double">1</ground-factor>		
+		</ndfull>
+		<path>Aircraft/767/Systems/instrumentation.xml</path>
+	</instrumentation>
+
+	<multiplay>
+		<generic>
+			<int n="10" alias="voodoomaster/radar[0]/antenna-r"/>
+		</generic>
+	</multiplay>
+
+	<tanker type="bool">true</tanker>
+
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="float">6.0</max-pitch>
+			<bank-angle-limit-deg type="int">45</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<max-pitch type="float">6.0</max-pitch>
+		</internal>
+
+	</autopilot>
+
+	<nasal>
+		<b767>
+			<file>Aircraft/767/Nasal/Electrical.nas</file>
+			<!-- file>Aircraft/767/Nasal/flightdirector.nas</file -->
+			<file>Aircraft/767/Nasal/767.nas</file>
+			<!-- file>Aircraft/767/Nasal/lighting.nas</file -->
+			<file>Aircraft/767/Nasal/Sys-Info.nas</file>
+			<file>Aircraft/767/Nasal/Anti-Ice.nas</file>
+			<file>Aircraft/JPack/Voodoomaster/Nasal/Instruments/MFD/mfd-navigation.nas</file>
+			<file>Aircraft/JPack/Voodoomaster/Nasal/Instruments/MFD/nd-fullscreen.nas</file>
+		</b767>
+		<walk>
+			<file>Aircraft/767/Nasal/walk.nas</file>
+		</walk>
+		<!-- failures>
+			<file>Aircraft/767/Nasal/Failures.nas</file>
+		</failures -->
+	</nasal>
+
+</PropertyList>

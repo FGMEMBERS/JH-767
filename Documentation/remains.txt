@@ -1,0 +1,113 @@
+    
+	<!-- Instrumentao - Prestes Hangar code - 2009 -->
+	<instrumentation>
+			<mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+			<serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+			<configuration-module>
+				<category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+					255 <!-- aircraft type T1, fast turbofan -->
+				</category-1>
+				<category-4>                    <!-- ALTITUDE_CALLOUTS -->
+					13 <!-- enable all altitude callouts -->
+				</category-4>
+				<category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+					5 <!-- flashing warning lamp -->
+				</category-13>
+			</configuration-module>
+			<inputs>                            <!-- Module I/O -->
+				<arinc429>
+					<!-- provide fixed value for decision height -->
+					<decision-height-ncd> false </decision-height-ncd>
+					<decision-height> 250 </decision-height>
+				</arinc429>
+			</inputs>
+			<input-feeders>    <!-- disable some internal default feeders -->
+				<discretes>
+					<!-- will provide custom (nasal) sources for the following input feeders -->
+					<glideslope-inhibit> false </glideslope-inhibit>
+					<landing-gear> false </landing-gear>
+					<landing-flaps> false </landing-flaps>
+				</discretes>
+			</input-feeders>
+			<speaker>                           <!-- Speaker Configuration -->
+				<max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+				<reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+				<volume> 0.6 </volume>          <!-- Volume at reference distance -->
+			</speaker>
+		</mk-viii>
+
+		<adf n="1">
+			<serviceable type="bool">1</serviceable>
+			<mode>adf</mode>
+			<frequencies>
+				<selected-khz>341</selected-khz>
+				<standby-khz>379</standby-khz>
+			</frequencies>
+		</adf>
+
+		<efis>
+			<eicas>
+				<msg n="0">
+					<text>TESTING TESTING</text>
+					<red>0.8</red>
+					<green>0.4</green>
+					<blue>0.2</blue>
+					<alpha>0.5</alpha>
+				</msg>
+			</eicas>
+		</efis>
+
+		<rmu>
+			<unit n="0">
+				<source-index type="int">0</source-index>
+				<source type="string">comm1</source>
+			</unit>
+			<unit n="1">
+				<source-index type="int">2</source-index>
+				<source type="string">nav1</source>
+			</unit>
+			<unit n="2">
+				<source-index type="int">5</source-index>
+				<source type="string">adf</source>
+			</unit>
+		</rmu>
+
+		<nav>
+			<frequencies>
+				<standby-mhz n="1" type="double">109.50</standby-mhz>
+				<standby-mhz n="2" type="double">109.55</standby-mhz>
+				<standby-mhz n="3" type="double">110.10</standby-mhz>
+				<standby-mhz n="4" type="double">111.70</standby-mhz>
+			</frequencies>
+		</nav>
+
+		<nav n="1">
+			<frequencies>
+				<standby-mhz n="1" type="double">109.50</standby-mhz>
+				<standby-mhz n="2" type="double">109.55</standby-mhz>
+				<standby-mhz n="3" type="double">110.10</standby-mhz>
+				<standby-mhz n="4" type="double">111.70</standby-mhz>
+			</frequencies>
+		</nav>
+
+		<wxradar>
+			<serviceable>true</serviceable>
+			<range type="int" archive="y">20</range>
+			<minimized type="bool" archive="y">false</minimized>
+			<switch archive="y">on</switch>
+			<mode archive="y">wx</mode>
+			<lightning type="bool" archive="y">true</lightning>
+			<display-mode archive="y">arc</display-mode>
+		</wxradar>
+
+		<radar>
+			<range type="int" archive="y">20</range>
+		</radar>
+
+		<transponder>
+			<id-code>1200</id-code>
+			<ta-ra>0</ta-ra>
+		</transponder>
+
+	</instrumentation>
+

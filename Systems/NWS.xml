@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<system name="NWS">
+
+	<property>systems/NWS/engaged</property>
+
+	<channel name="Nose Wheel Steering">
+
+		<scheduled_gain name="systems/NWS/steer-deg0">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      7.0
+					1     70.0
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[0]</output>
+		</scheduled_gain>
+
+	</channel>
+
+</system>

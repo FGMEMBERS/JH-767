@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">DAL - Delta Airl. (Old)</name>
+            <texture>Liveries/767-300ER/DAL_OLD.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

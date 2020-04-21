@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>cockpit.ac</path>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>painel</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.45</green>
+			<blue>0.2</blue>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<!-- PFD -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/PFD/boeing747-400-pfd-jw.xml</path>
+		<offsets>
+			<x-m> -24.594 </x-m>
+			<y-m>-0.622838 </y-m>
+			<z-m> -1.12068 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/PFD/boeing747-400-pfd-jw.xml</path>
+		<offsets>
+			<x-m> -24.594 </x-m>
+			<y-m> 0.636645 </y-m>
+			<z-m> -1.12068 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- NAV -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/ENAV/boeing747-400-enav-jw.xml</path>
+		<offsets>
+			<x-m> -24.5611 </x-m>
+			<y-m>-0.622838 </y-m>
+			<z-m> -1.29002 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/ENAV/boeing747-400-enav-jw.xml</path>
+		<offsets>
+			<x-m> -24.5611 </x-m>
+			<y-m>  0.636645 </y-m>
+			<z-m> -1.29002 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Altimeter -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/Alt/boeing747-400-alt-jw.xml</path>
+		<offsets>
+			<x-m> -24.592 </x-m>
+			<y-m>-0.44757</y-m>
+			<z-m> -1.13122 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/Alt/boeing747-400-alt-jw.xml</path>
+		<offsets>
+			<x-m> -24.592 </x-m>
+			<y-m> 0.797218 </y-m>
+			<z-m> -1.13122 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- ADF -->
+
+	<!-- STB AI -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/stb-AI/stby-ai.xml</path>
+		<offsets>
+			<x-m> -24.5987 </x-m>
+			<y-m>-0.291276 </y-m>
+			<z-m> -1.0967 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Clock -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/clock/chronometer.xml</path>
+		<offsets>
+			<x-m> -24.555 </x-m>
+			<y-m>-0.44757 </y-m>
+			<z-m> -1.32172 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/clock/chronometer.xml</path>
+		<offsets>
+			<x-m> -24.555 </x-m>
+			<y-m> 0.797218 </y-m>
+			<z-m> -1.32172 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- STB IAS -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/stb-IAS/stby-asi.xml</path>
+		<offsets>
+			<x-m> -24.5783 </x-m>
+			<y-m>-0.293881 </y-m>
+			<z-m> -1.20187 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- IAS -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/IAS/asi.xml</path>
+		<offsets>
+			<x-m> -24.5904 </x-m>
+			<y-m>-0.80037 </y-m>
+			<z-m> -1.13958 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/IAS/asi.xml</path>
+		<offsets>
+			<x-m> -24.5904 </x-m>
+			<y-m> 0.444418 </y-m>
+			<z-m> -1.13958 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- EICAS -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/EICAS/eicas.xml</path>
+		<offsets>
+			<x-m> -24.5991 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -1.09474 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- EICAS 2 -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/EICAS/eicas.xml</path>
+		<offsets>
+			<x-m> -24.5635 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -1.27771 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- STB Altimeter -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/stb-Alt/stby-alt.xml</path>
+		<offsets>
+		<x-m> -24.5589 </x-m>
+		<y-m>-0.293881</y-m>
+		<z-m> -1.30147 </z-m>
+		<roll-deg>     0 </roll-deg>
+		<pitch-deg>   -11</pitch-deg>
+		<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- TCAS / NDB -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/NDB/ndb.xml</path>
+		<offsets>
+			<x-m> -24.5736 </x-m>
+			<y-m>-0.44757 </y-m>
+			<z-m> -1.22583 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- VSPEED -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/VSI/vsi.xml</path>
+		<offsets>
+			<x-m> -24.5736 </x-m>
+			<y-m> 0.797218 </y-m>
+			<z-m> -1.22583 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- HSI -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/HSI/hsi.xml</path>
+		<offsets>
+			<x-m> -24.5671 </x-m>
+			<y-m>-0.785875 </y-m>
+			<z-m> -1.25909 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/HSI/hsi-2.xml</path>
+		<offsets>
+			<x-m> -24.5671 </x-m>
+			<y-m>-0.785875 </y-m>
+			<z-m> -1.25909 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/HSI/hsi.xml</path>
+		<offsets>
+			<x-m> -24.5671 </x-m>
+			<y-m> 0.458913 </y-m>
+			<z-m> -1.25909 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/HSI/hsi-2.xml</path>
+		<offsets>
+			<x-m> -24.5671 </x-m>
+			<y-m> 0.458913 </y-m>
+			<z-m> -1.25909 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Flap indicator -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/Flaps/flaps.xml</path>
+		<offsets>
+			<x-m> -24.5775 </x-m>
+			<y-m> 0.148065 </y-m>
+			<z-m> -1.19671 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+
+	<!-- Marker Beacon -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/MarkerBeacon/marker_beacons.xml</path>
+		<offsets>
+			<x-m> -24.6056 </x-m>
+			<y-m> -0.447351 </y-m>
+			<z-m> -1.06106 </z-m>
+			<roll-deg>    -90 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/MarkerBeacon/marker_beacons.xml</path>
+		<offsets>
+			<x-m> -24.6056 </x-m>
+			<y-m> 0.797437 </y-m>
+			<z-m> -1.06106 </z-m>
+			<roll-deg>    -90 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- MCP -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/MCP/boeing747-400-mcp-jw.xml</path>
+		<offsets>
+			<x-m> -24.5396 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -0.939571 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- EFISP -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/EFISP/boeing747-400-efisp-jw.xml</path>
+		<offsets>
+			<x-m> -24.5396 </x-m>
+			<y-m>-0.307021 </y-m>
+			<z-m> -0.939571 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/EFISP/boeing747-400-efisp-jw.xml</path>
+		<offsets>
+			<x-m> -24.5396 </x-m>
+			<y-m> 0.307021 </y-m>
+			<z-m> -0.939571 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>   -11</pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Yokes -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/Yokes/yokes.xml</path>
+		<offsets>
+			<x-m> -25.3056 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -1.8545497 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>    0 </pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Magnetic Compass -->
+	<model>
+		<path>Aircraft/JH-767/Models/Cockpit/Instruments3/magcompass/mag-compass.xml</path>
+		<offsets>
+			<x-m> -24.7186 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -0.661677 </z-m>
+			<roll-deg>     0 </roll-deg>
+			<pitch-deg>    0 </pitch-deg>
+			<heading-deg>  0 </heading-deg>
+		</offsets>
+	</model>
+
+ 
+</PropertyList>

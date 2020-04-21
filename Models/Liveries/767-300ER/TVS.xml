@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">TVS - Travel Service</name>
+        <texture>Liveries/767-300ER/TVS.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

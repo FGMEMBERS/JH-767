@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<default>
+
+		<menu n="3">
+			<item>
+				<name>autopilot</name>
+				<label>Autopilot Settings</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Dialogs/autopilot11.xml");
+						autopilot.open();
+					</script>
+				</binding>
+			</item>
+		</menu>
+
+                <menu n="5">
+                	<item n="5">
+				<name>radio</name>
+	        		<label>Radio Settings Changed</label>
+				<binding>
+					<command>nasal</command>
+                            		<script>
+						var radio = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Dialogs/radio.xml");
+						radio.open();
+					</script>
+                        	</binding>
+                    	</item>
+                </menu>
+
+		<menu n="100">
+			<label>FlyingWorkshop</label>
+			<enabled type="bool">true</enabled>
+
+			<item>
+				<name>autostart</name>
+				<label>Autostart</label>
+				<binding>
+					<command>property-toggle</command>
+					<property>aircraft/start-idling</property>
+				</binding>
+			</item>
+
+			<item>
+				<label>Pilots</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var pilots_dialog = b767.PilotsDialog.new();
+					</script>
+				</binding>
+			</item>
+
+			<item>
+				<label>Yoke On/Off</label>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/yoke-visible</property>
+				</binding>
+			</item>
+
+			<item>
+				<label>----------------------------------------------</label>
+			</item>
+
+			<item>
+				<name>lights</name>
+				<label>Lights</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Dialogs/lights.xml");
+						lights.open();
+					</script>
+				</binding>
+			</item>
+
+			<item>
+				<label>Announcements</label>
+     				<binding>
+		       			<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/Lineage1000[1]/menu/dialog", "Dialogs/announcements.xml");
+		        			mal.open();
+       					</script>
+      				</binding>
+     			</item>
+
+			<item>
+				<label>----------------------------------------------</label>
+			</item>
+
+			<item>
+				<label>Extend Boom</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-angle</property>
+					<value>0.6</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-extend</property>
+					<value>1.0</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Retract Boom</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-angle</property>
+					<value>0.0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-extend</property>
+					<value>0.0</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Extend Probes</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[1]/probe-extended</property>
+					<value>true</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[2]/probe-extended</property>
+					<value>true</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[3]/probe-extended</property>
+					<value>true</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Retract Probes</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[1]/probe-extended</property>
+					<value>false</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[2]/probe-extended</property>
+					<value>false</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[3]/probe-extended</property>
+					<value>false</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>----------------------------------------------</label>
+			</item>
+
+			<item>
+				<label>Doors</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", "Aircraft/767/Dialogs/doors-dialog.xml");
+						mal.open();
+					</script>
+				</binding>
+			</item>
+
+			<item>
+				<name>pushback</name>
+				<label>Pushback</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>pushback</dialog-name>
+				</binding>
+			</item>
+	
+			<item>
+				<label>Airport Operations</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", "Aircraft/767/Dialogs/airportoperations-dialog.xml");
+						mal.open();
+					</script>
+				</binding>
+			</item>
+
+			<item>
+				<label>----------------------------------------------</label>
+			</item>
+
+			<item>
+				<label>Select Livery</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						aircraft.livery.dialog.open()
+					</script>
+				</binding>
+			</item>
+
+		</menu>
+	</default>
+
+</PropertyList>
+

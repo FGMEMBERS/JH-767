@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Flying Workshop</name>
+            <texture>Liveries/767-Workshop/JFW.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

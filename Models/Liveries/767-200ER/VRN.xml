@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">VRN - Varig Airl.</name>
+            <texture>Liveries/767-200ER/VRN.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>
