@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>turretdown.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tourelle2</object-name>
+    <object-name>inttourelle2</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>verretourelle2</object-name>
+    <object-name>intverretourelle2</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/FlyingFortress-Jsb/Models/Effects/Glass/glass</inherits-from>
+    <object-name>verretourelle2</object-name>
+    <object-name>intverretourelle2</object-name>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>verretourelle2</object-name>
+    <object-name>intverretourelle2</object-name>
+  </effect>
+  
+  <!-- Mitrailleuses -->
+  <!-- Up turet -->
+  <model>
+    <name>DownLeftGun</name>
+    <path>Aircraft/JPack/Voodoomaster/Models/Guns/guns.xml</path>
+    <offsets>
+      <x-m> -0.64117 </x-m>
+      <y-m> -0.14400 </y-m>
+      <z-m> -0.45704 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>DownRightGun</name>
+    <path>Aircraft/JPack/Voodoomaster/Models/Guns/guns.xml</path>
+    <offsets>
+      <x-m> -0.64117 </x-m>
+      <y-m>  0.14400 </y-m>
+      <z-m> -0.45704 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Animation de la tourelle du toit -->
+  <animation>
+    <name>TourelledeDessous</name>
+    <object-name>tourelle2</object-name>
+    <object-name>inttourelle2</object-name>
+    <object-name>verretourelle2</object-name>
+    <object-name>intverretourelle2</object-name>
+    <object-name>DownLeftGun</object-name>
+    <object-name>DownRightGun</object-name>
+  </animation>
+  
+  <animation>
+    <name>DownTurret</name>
+    <object-name>DownLeftGun</object-name>
+    <object-name>DownRightGun</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TourelledeDessous</object-name>
+    <property>sim/model/turret[1]/heading</property>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>DownTurret</object-name>
+    <property>sim/model/turret[1]/pitch</property>
+    <center>
+      <x-m> -0.2291 </x-m>
+      <y-m>  0.0000 </y-m>
+      <z-m> -0.4531 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+    
+	<animation>
+		<type>select</type>
+		<name>TourelledeToit</name>
+		<object-name>tourellemobile</object-name>
+		<object-name>inttourellemobile</object-name>
+		<object-name>verretourellemobile</object-name>
+		<object-name>intverretourelle1</object-name>
+		<object-name>GunsMobileLeft</object-name>
+		<object-name>GunsMobileRight</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/voodoomaster/turret[0]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[1]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[2]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[3]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[4]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[5]/device</property>
+					<value>TurretDownRear</value>
+				</equals>
+			</or>
+		</condition>	
+	</animation>
+
+</PropertyList>

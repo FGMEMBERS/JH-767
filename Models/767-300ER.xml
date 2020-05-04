@@ -44,8 +44,7 @@
     
 	<!-- Cockpit, with everything included in the flightdeck directed from this file -->
 	<model>
-		<!-- path>Aircraft/JH-767/Models/Cockpit/cockpit.xml</path -->
-		<path>Aircraft/767/Models/FlightDeck/flightdeck.xml</path>
+		<path>Aircraft/JH-767/Models/FlightDeck/flightdeck.xml</path>
 		<offsets>
 			<x-m>1.55</x-m>
 			<y-m>0.0</y-m>

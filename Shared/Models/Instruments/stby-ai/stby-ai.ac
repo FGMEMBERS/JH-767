@@ -1,0 +1,57 @@
+AC3Db
+MATERIAL "lights.002" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
+MATERIAL "skin.001" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.7 0.7 0.7  shi 48  trans 0
+MATERIAL "ac3dmat1.001.000" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 13  trans 0
+MATERIAL "interior.001.000" rgb 0.898039 0.898039 0.898039  amb 0.898039 0.898039 0.898039  emis 0 0 0  spec 0.054902 0.054902 0.054902  shi 12.8  trans 0
+MATERIAL "interior.003" rgb 0.886275 0.886275 0.886275  amb 0.886275 0.886275 0.886275  emis 0 0 0  spec 0.407843 0.407843 0.407843  shi 12.8  trans 0
+MATERIAL "interior.004" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 12.8  trans 0
+MATERIAL "interior.003" rgb 0.887811 0.887811 0.887811  amb 0.8 0.8 0.8  emis 0 0 0  spec 0.40864 0.40864 0.40864  shi 0  trans 0
+MATERIAL "interior.004" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 0  trans 0
+MATERIAL "interior.001" rgb 0.9 0.9 0.9  amb 0.9 0.9 0.9  emis 0.053 0.053 0.053  spec 0 0 0  shi 0  trans 0
+MATERIAL "lights.002" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 72  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 0  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.686 0.671 0.686  emis 0.682 0.682 0.682  spec 0 0 0  shi 128  trans 0
+MATERIAL "Color_009" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.33 0.33 0.33  shi 32  trans 0
+MATERIAL "instr-lights" rgb 0.80179 0.80179 0.80179  amb 0.80179 0.80179 0.80179  emis 1 1 1  spec 0 0 0  shi 0  trans 0
+MATERIAL "Greenglow" rgb 1 1 1  amb 1 1 1  emis 0.5 0.5 0.5  spec 0 0 0  shi 0  trans 0
+MATERIAL "Gloss" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 1 1 1  shi 12  trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 12  trans 0
+MATERIAL "_Orphans" rgb 0.8 0.8 0.8  amb 0.5 0.5 0.5  emis 0 0 0  spec 1 1 1  shi 32  trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "stby-ai"
+loc -23.6419 1.63757 -0.00175695
+texture "ati.png"
+crease 45.000000
+numvert 11
+-0.178604 0.190683 0.0367582
+-0.180168 0.195805 -0.0372852
+-0.180168 0.195805 0.0349187
+-0.160419 0.131207 -0.0372852
+-0.160419 0.131207 -0.0340661
+-0.160179 0.130422 -0.0302057
+-0.159523 0.128278 -0.0270837
+-0.158543 0.125073 -0.0246449
+-0.157551 0.121819 -0.0234882
+-0.155842 0.116237 -0.0234882
+-0.155842 0.116237 0.0367582
+numsurf 1
+SURF 0x10
+mat 13
+refs 11
+3 0.375 0.422048
+1 0.375 0.625
+2 0.131211 0.625
+0 0.125 0.60892
+10 0.125 0.375
+9 0.328416 0.375
+8 0.328416 0.392541
+7 0.332321 0.402775
+6 0.340556 0.412832
+5 0.351097 0.419569
+4 0.364131 0.422048
+kids 0
+

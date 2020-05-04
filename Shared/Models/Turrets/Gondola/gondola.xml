@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>Gondola.ac</path>
+
+  <!--Correct texturizing -->
+  <animation>
+    <type>material</type>
+    <object-name>Gondola</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>gondola.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>seat</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Seat.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Gondola</object-name>
+    <object-name>glass</object-name>
+    <object-name>seat</object-name>
+    <emission>
+      <property>/sim/model/hide-gondola</property>
+      <red>   0.5 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <name>gondola</name>
+    <object-name>Gondola</object-name>
+    <object-name>glass</object-name>
+    <object-name>seat</object-name>
+  </animation>
+ 
+  <!-- Mitrailleuses -->
+  <!-- Up turet -->
+  <model>
+    <name>GunsMobileLeft</name>
+    <path>Aircraft/JPack/Voodoomaster/Models/Guns/guns.xml</path>
+    <offsets>
+      <x-m> -9.38878 </x-m>
+      <y-m> 0.12310 </y-m>
+      <z-m>  -1.1 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>GunsMobileRight</name>
+    <path>Aircraft/JPack/Voodoomaster/Models/Guns/guns.xml</path>
+    <offsets>
+      <x-m> -9.38878 </x-m>
+      <y-m> -0.12310 </y-m>
+      <z-m>  -1.1 </z-m>
+    </offsets>
+  </model>
+  
+  <animation>
+    <name>TourelledeToitGuns</name>
+    <object-name>GunsMobileLeft</object-name>
+    <object-name>GunsMobileRight</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TourelledeToitGuns</object-name>
+    <property>sim/model/turret[2]/heading</property>
+    <center>
+      <x-m> -9.38878 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m>  -1.1 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TourelledeToitGuns</object-name>
+    <property>sim/model/turret[2]/pitch</property>
+    <center>
+      <x-m> -9.38878 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m>  -1.1 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Gondola</object-name>
+    <center>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.00 </z-m>
+    </center>
+    <axis>
+      <x> 10 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+	<animation>
+		<type>scale</type>
+		<x-offset>0.7</x-offset>
+		<y-offset>1.0</y-offset>
+		<z-offset>1.0</z-offset>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Gondola</object-name>
+		<object-name>glass</object-name>
+		<object-name>seat</object-name>
+		<object-name>GunsMobileLeft</object-name>
+		<object-name>GunsMobileRight</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/voodoomaster/turret[0]/device</property>
+					<value>Gondola</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[1]/device</property>
+					<value>Gondola</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[2]/device</property>
+					<value>Gondola</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[3]/device</property>
+					<value>Gondola</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[4]/device</property>
+					<value>Gondola</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/turret[5]/device</property>
+					<value>Gondola</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+
+</PropertyList>

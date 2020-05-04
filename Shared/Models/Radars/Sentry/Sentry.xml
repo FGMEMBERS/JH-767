@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+	<path>Sentry.ac</path>
+ 
+	<animation>
+		<type>scale</type>
+		<x-offset>1.0</x-offset>
+		<y-offset>1.0</y-offset>
+		<z-offset>1.0</z-offset>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Radome</object-name>
+		<object-name>RadomeSup</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Radome</object-name>
+		<object-name>RadomeSup</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/voodoomaster/radar[0]/device</property>
+					<value>Sentry</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/radar[1]/device</property>
+					<value>Sentry</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/radar[2]/device</property>
+					<value>Sentry</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/radar[3]/device</property>
+					<value>Sentry</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/radar[4]/device</property>
+					<value>Sentry</value>
+				</equals>
+				<equals>
+					<property>/voodoomaster/radar[5]/device</property>
+					<value>Sentry</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Radome</object-name>
+		<condition>
+			<property>/voodoomaster/radar[0]/antenna-r</property>
+		</condition>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>20</factor>
+		<center>
+			<x-m>10.022</x-m>
+			<y-m>0.05</y-m>
+			<z-m>6.256</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+</PropertyList>

@@ -1692,7 +1692,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/OHpanel_base_lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/OHpanel_base_lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -1705,7 +1705,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/OHpanel_panels_lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/OHpanel_panels_lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>

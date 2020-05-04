@@ -73,7 +73,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/mainpanel-lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/mainpanel-lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -101,7 +101,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/seat-plastic-lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/seat-plastic-lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -114,7 +114,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/seat-leather-lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/seat-leather-lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -127,7 +127,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/767/Models/Effects/extra1-lightmap.png</image>
+				<image>Aircraft/JH-767/Models/Effects/extra1-lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -138,7 +138,7 @@
 
 	<!-- OverHead Panel -->
 	<model>
-		<path>Aircraft/767/Models/FlightDeck/OHpanel.xml</path>
+		<path>Aircraft/JH-767/Models/FlightDeck/OHpanel.xml</path>
 		<offsets>
 			<x-m>-23.1092</x-m>
 			<y-m>0</y-m>
@@ -147,9 +147,9 @@
 		</offsets>
 	</model>
 
-	<!-- Compass -->
+	<!-- Magnetic Compass -->
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/magnetic-compass/magnetic-compass1.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/magnetic-compass/magnetic-compass1.xml</path>
 		<offsets>
 			<x-m>-23.7505</x-m>
 			<y-m>0</y-m>
@@ -159,7 +159,7 @@
 
 	<!-- Standby AI -->
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/stby-ai/stby-ai.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/stby-ai/stby-ai.xml</path>
 		<offsets>
 			<x-m>-23.7505</x-m>
 			<y-m>0</y-m>
@@ -169,7 +169,7 @@
 
 	<!-- EICAS -->
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/EICAS/EICAS1.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/EICAS/EICAS1.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>-0.15</y-m>
@@ -180,7 +180,7 @@
 
 	<!-- PFDs -->
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/PFD/PFD1.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/PFD/PFD1.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>-0.634543</y-m>
@@ -190,7 +190,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/PFD/PFD1.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/PFD/PFD1.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>0.641714</y-m>
@@ -202,7 +202,7 @@
 	<!-- MFDs -->
 
 	<model>
-		<path>Aircraft/JPack/Voodoomaster/Models/Instruments/MFD/MFD1.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/MFD/MFD1.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>-0.33</y-m>
@@ -212,7 +212,7 @@
 	</model>
 
 	<!-- model>
-		<path>Aircraft/767/Models/Instruments/MFD2.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/MFD2.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>0.16</y-m>
@@ -222,7 +222,7 @@
 	</model -->
 
 	<!-- model>
-		<path>Aircraft/767/Models/Instruments/MFD3.xml</path>
+		<path>Aircraft/JH-767/Shared/Models/Instruments/MFD3.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>0.338</y-m>
